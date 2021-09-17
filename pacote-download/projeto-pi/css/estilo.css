@@ -14,7 +14,7 @@ a {
 	text-decoration: none;
 }
 
-/*Define div com 100% de height */
+/* Define div com 100% de altura */
 .vh-100 { 
 	min-height: 100vh;
 }
@@ -24,13 +24,12 @@ a {
 ***************************************************************/
 
 
-#container-index {
+#background-cabecalho {
 	background: rgb(255, 255, 255) url("../img/cabecalho-inicio.png") no-repeat top;
 	padding: 0px;
-	height: 945px;
 }
 
-#container-index .navbar-nav > li > a {
+#background-cabecalho .navbar-nav > li > a {
 	padding-top:0px !important; 
 	padding-bottom:0px !important;
 }
@@ -40,10 +39,10 @@ a {
 ***************************************************************/
 
 .cor-fundo {
-	background-color: #F3F3F3;
+	background-color: #F3F3F3 !important;
 }
 
-/* Font Aersome*/
+/* Font Aersome */
 .fa-facebook-square {
 	color: #3b5998;
 }
@@ -51,3 +50,8 @@ a {
 .fa-google-plus-square {
 	color: #db4a39;
 }
+
+/***************************************************************
+		Customizações Cadastro
+***************************************************************/
+
