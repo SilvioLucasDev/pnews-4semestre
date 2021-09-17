@@ -15,40 +15,43 @@
   </head>
   <body>
 
-	<div id="container-login" class="container">
-        <div class="row">
+	<div class="container">
+        <div class="row vh-100">
 
-            <div class="col-5  d-none d-lg-block">
-                <div class="row offset-sm-2 mt-5 ">
+            <div class="col-5 d-none d-lg-block align-self-center">
+                <div class="row justify-content-center">
                     <img src="img/logo-pnews-login.svg">
                 </div>
 
-                <div class="row offset-sm-2 mt-5">
+                <div class="row justify-content-center">
 					<img src="img/mascote.svg" width="509" height="475">
 				</div>
             </div>
 
-            <div class="col-12 col-lg-7 cor-fundo">
-                <div class="row" >
-                    <h1>Insira Seu e-mail e senha</h1>
+            <div class="col-12 col-lg-7">
+                <div class="container cor-fundo">
+                    <div class="row justify-content-center vh-100">
+                        <div class="col-10 col-sm-8 text-center align-self-center">
+                            <h2 class="mb-5" ><strong>Login</strong></h2>
 
-                    <form action="php...">
-                        <input type="text" placeholder="E-mail">
-                        <br>
-                        <input type="password" placeholder="Senha">
-                        <br>
-                        <a href="#"> Esqueceu a senha?</a>
+                            <form class="mb-5" action="php...">
+                                <input class="form-control" type="text" placeholder="E-mail">
+                                <br>
+                                <input class="form-control" type="password" placeholder="Senha">
+                                <br>
+                                <a href="#" class="link-dark h5"> Esqueceu a senha?</a>
 
-                        <div>
-                            <p>Login Facebook e google</p>
+                                <div>
+                                    <p >Login Facebook e google</p>
+                                </div>
+
+                                <input class="btn btn-outline-danger btn-lg" type="submit" value="Continuar" >
+                            </form>
+
+                            <a href="#" class="link-dark h5"> Cadastre-se grátis</a>
                         </div>
-
-                        <input type="submit" >
-                    </form>
+                    </div>
                 </div>
-
-                <a href="#"> Cadastre-se grátis</a>
-
             </div>
 
         </div>
@@ -56,7 +59,7 @@
 
 
 	<footer>
-		<p class="bg-black bg-opacity-50 text-black text-center mb-0">2021 © Copyright GRUPO 9 SI technologies.</p>
+		<p class="bg-black bg-opacity-50 text-black text-center mb-0 fixed-bottom">2021 © Copyright GRUPO 9 SI technologies.</p>
 	</footer>
 
   </body>

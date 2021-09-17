@@ -30,6 +30,8 @@ a {
 
 .cor-fundo {
 	background-color: #F3F3F3;
-	height: 926px;
 }
 
+.vh-100 { /*Define div com 100% de height */
+	min-height: 100vh;
+}
