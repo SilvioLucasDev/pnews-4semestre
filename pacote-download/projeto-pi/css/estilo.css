@@ -1,5 +1,6 @@
-/* Estrutura padrão do site */
-
+/***************************************************************
+		Estrutura padrão do site e classes globais
+***************************************************************/
 * {
 	margin: 0px;
 	padding: 0px;
@@ -13,7 +14,15 @@ a {
 	text-decoration: none;
 }
 
-/* Customizações cabeçalho e nav-bar Index*/
+/*Define div com 100% de height */
+.vh-100 { 
+	min-height: 100vh;
+}
+
+/***************************************************************
+		Customizações cabeçalho e nav-bar Index
+***************************************************************/
+
 
 #container-index {
 	background: rgb(255, 255, 255) url("../img/cabecalho-inicio.png") no-repeat top;
@@ -26,12 +35,19 @@ a {
 	padding-bottom:0px !important;
 }
 
-/* Customizações Login*/
+/***************************************************************
+		Customizações Login
+***************************************************************/
 
 .cor-fundo {
 	background-color: #F3F3F3;
 }
 
-.vh-100 { /*Define div com 100% de height */
-	min-height: 100vh;
+/* Font Aersome*/
+.fa-facebook-square {
+	color: #3b5998;
+}
+
+.fa-google-plus-square {
+	color: #db4a39;
 }
