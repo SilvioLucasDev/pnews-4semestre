@@ -1,10 +1,10 @@
 <h1 align="center">
- 👨‍🔧 Apnews - PROJETO EM CONSTRUÇÃO
+ 👨‍🔧 Pnews - PROJETO EM CONSTRUÇÃO
 </h1>
 
 # 📌 O que é? 
 
-Apnews tem como objetivo facilitar a vida de pessoas que utilizam sempre de veículos propíos como meio de locomoção, de princípio está sendo desenvolvido especialmente para a classe de motoqueiros, já que em uma moto é impossível de se transportar um step. Dentro do aplicativo você encontrará as seguintes funcionalidades:
+Pnews tem como objetivo facilitar a vida de pessoas que utilizam sempre de veículos propíos como meio de locomoção, de princípio está sendo desenvolvido especialmente para a classe de motoqueiros, já que em uma moto é impossível de se transportar um step. Dentro do aplicativo você encontrará as seguintes funcionalidades:
 
 * HELP-ME - Se estiver precisando de um borracheiro é só criar um chamado que um de nossos parceiros irá te socorrer.
 
