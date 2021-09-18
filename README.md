@@ -4,7 +4,7 @@
 
 # 📌 O que é? 
 
-Apnews tem como objetivo facilitar a vida de pessoas que utilizam sempre de veículos propíos como meio de locomoção, de princípio está sendo desenvolvido especialmente para a classe de motoqueiros, já que em uma moto é impossível de se transportar um step. Dentro do aplicativo você encontra-ra as seguintes funcionalidades:
+Apnews tem como objetivo facilitar a vida de pessoas que utilizam sempre de veículos propíos como meio de locomoção, de princípio está sendo desenvolvido especialmente para a classe de motoqueiros, já que em uma moto é impossível de se transportar um step. Dentro do aplicativo você encontrará as seguintes funcionalidades:
 
 * HELP-ME - Se estiver precisando de um borracheiro é só criar um chamado que um de nossos parceiros irá te socorrer.
 
@@ -15,6 +15,10 @@ Apnews tem como objetivo facilitar a vida de pessoas que utilizam sempre de veí
 # 🛠 Tecnologias a serem utilizadas 
 
 * HTML
+* CSS
+* JS
 * Bootstrap
 * PHP
 * MySQL
+
+* API do Maps, e de Login do Facebok e Google
