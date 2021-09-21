@@ -29,9 +29,10 @@ body {
 		Classes globais
 *****************************************************************************************************/
 
-#full-height {
-	height: 100%;
+.full-height {
+	height: 86%;
 }
+
 
 /* Cor cinza background */
 .cor-fundo {
@@ -83,7 +84,4 @@ body {
 
 .cor-teste {
 	background-color: #7e0000 !important;
-}
-.height-full{
-	height: 86%;
 }
