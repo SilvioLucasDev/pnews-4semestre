@@ -1,3 +1,13 @@
+<?php 
+
+	require '../pnews/usuario_controller.php';
+
+	if(!isset($_SESSION['autenticado']) || $_SESSION['autenticado'] != 'SIM' ){
+		header('location: login.php');
+	}	
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -36,7 +46,7 @@
 					<div class="collapse navbar-collapse justify-content-end" id="nav-target">			
 						<ul class="navbar-nav ml-auto"> 
 							<li class="nav-item">
-								<a href="home.html" class="nav-link text-black"><strong>Home</strong></a>
+								<a href="home.php" class="nav-link text-black"><strong>Home</strong></a>
 							</li>
 	
 							<li class="divisor-nav align-self-center collapse navbar-collapse"></li>
@@ -69,7 +79,7 @@
                             var map = new google.maps.Map(mapCanvas, mapOptions);
                             }
                         </script>   
-                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjQxnuZYdx5CK1vPW3J6zAMcofj04l5rY&callback=myMap"></script>
+                        <!-- Colocar chave da API do google aqui-->
     
                     </div>
 				</div>

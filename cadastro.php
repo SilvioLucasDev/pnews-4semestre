@@ -45,56 +45,56 @@
                     <div class="row justify-content-center">
                         <div class="col-10 col-sm-8 text-center align-self-center">
 
-                            <form class="mb-5" action="php...">
-                                <input class="form-control my-2 borda" type="text" placeholder="Nome">
+                            <form class="mb-5" action="usuario_controller.php" method="POST">
+                                <input class="form-control my-2 borda" type="text" name="nome" placeholder="Nome" required>
 
                                 <div class="row my-2">
                                     <div class=" col-md-8 col-lg-7 col-xl-8">
-                                        <input class="form-control borda" type="text" placeholder="CPF">
+                                        <input class="form-control borda" type="text" name="cpf" placeholder="CPF" required>
                                     </div>
 
-                                    <div class=" mt-2 mt-md-0 col-md-4 col-lg-5 col-xl-4">
-                                        <input class="form-control borda" type="text" placeholder="Nascimento">
+                                    <div class="mt-2 mt-md-0 col-md-4 col-lg-5 col-xl-4">
+                                        <input class="form-control borda" type="text" name="dt_nascimento" placeholder="Nascimento" required>
                                     </div>
                                 </div>
 
-                                <input class="form-control my-2 borda" type="text" placeholder="Telefone">
+                                <input class="form-control my-2 borda" type="text" name="telefone" placeholder="Telefone" required>
 
-                                <input class="form-control my-2 borda" type="text" placeholder="E-mail">
+                                <input class="form-control my-2 borda" type="text" name="email" placeholder="E-mail" required>
 
-                                <input class="form-control my-2 borda" type="text" placeholder="Senha">
+                                <input class="form-control my-2 borda" type="password" name="senha" placeholder="Senha" required>
 
                                 <div class="row my-2">
                                     <div class="col-md-9">
-                                        <input class="form-control borda" type="text" placeholder="Rua">
+                                        <input class="form-control borda" type="text" name="rua" placeholder="Rua" required>
                                     </div>
 
                                     <div class="mt-2 mt-md-0 col-md-3">
-                                        <input class="form-control borda" type="text" placeholder="Nº">
+                                        <input class="form-control borda" type="text" name="numero" placeholder="Nº" required>
                                     </div>
                                 </div>
 
-                                <input class="form-control my-2 borda" type="text" placeholder="Bairro">
+                                <input class="form-control my-2 borda" type="text" name="bairro" placeholder="Bairro" required>
 
                                 <div class="row my-2">
                                     <div class="col-md-7">
-                                        <input class="form-control borda" type="text" placeholder="Cidade">
+                                        <input class="form-control borda" type="text" name="cidade" placeholder="Cidade" required>
                                     </div>
 
                                     <div class="mt-2 mt-md-0 col-md-5">
-                                        <input class="form-control borda" type="text" placeholder="Estado">
+                                        <input class="form-control borda" type="text" name="estado" placeholder="Estado" required>
                                     </div>
                                 </div>
 
-                                <input class="form-control my-2 borda" type="text" placeholder="Modelo da moto">
+                                <input class="form-control my-2 borda" type="text" name="modelo_moto" placeholder="Modelo da moto" required>
 
-                                <input class="form-control my-2 borda" type="text" placeholder="Marca de pneu utilizado">
+                                <input class="form-control my-2 borda" type="text" name="pneu_utilizado" placeholder="Marca de pneu utilizado" required>
 
-                                <input class="form-control my-2 borda" type="text" placeholder="Modelo do pneu">
+                                <input class="form-control my-2 borda" type="text" name="modelo_pneu" placeholder="Modelo do pneu" required>
 
-                                <input class="form-control my-2 borda" type="text" placeholder="Tempo médio de troca">
+                                <input class="form-control my-2 borda" type="text" name="tp_medio_troca" placeholder="Tempo médio de troca" required>
 
-                                <input class="btn btn-outline-danger btn-lg mt-4 borda" type="submit" value="Continuar" >
+                                <input class="btn btn-outline-danger btn-lg mt-4 borda" type="submit" name="submit" value="Continuar" >
                             </form>
                         </div>
                     </div>

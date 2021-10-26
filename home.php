@@ -1,3 +1,13 @@
+<?php 
+
+	require '../pnews/usuario_controller.php';
+
+	if(!isset($_SESSION['autenticado']) || $_SESSION['autenticado'] != 'SIM' ){
+		header('location: login.php');
+	}	
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -34,11 +44,16 @@
 
 					<!-- Navegação -->
 					<div class="collapse navbar-collapse justify-content-end" id="nav-target">			
-						<ul class="navbar-nav"> 
+						<ul class="navbar-nav">
+							
 							<li class="nav-item">
-								<a href="perfil.html" class="nav-link text-black"><strong>Perfil</strong></a>
+
+								<a href="usuario_controller.php?perfil=1" class="nav-link text-black">
+									<strong>Perfil</strong>
+								</a>
+
 							</li>
-	
+							
 							<li class="divisor-nav align-self-center collapse navbar-collapse"></li>
 
 							<li class="nav-item">
@@ -59,7 +74,7 @@
 				<div class="row justify-content-center h-100">
 					<div class="col col-lg-9 col-xl-7 align-self-center">
 						<div class="botao">
-							<a href="borracharias.html"> 
+							<a href="borracharias.php"> 
 								<img src="img/botao-procure-borracharias.svg" class="img-fluid" alt="Procurar Borracharias">
 							</a>
 						</div>
