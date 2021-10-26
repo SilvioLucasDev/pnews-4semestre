@@ -1,3 +1,28 @@
+<?php
+
+	require '../pnews/usuario_controller.php';
+
+	if(!isset($_SESSION['autenticado']) || $_SESSION['autenticado'] != 'SIM' ){
+		header('location: login.php');
+	}	
+
+	//print_r($_SESSION['id']); Possível forma de trazer os dados
+
+	echo '<pre>';
+		print_r($recuperar);
+	echo '<pre>';
+
+	foreach ($recuperar as $indice => $user) {
+
+		echo '<pre>';
+			print_r($user);
+		echo '</pre>';
+				
+		print_r($user->nome);
+    }
+ 	
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -11,7 +36,7 @@
     <!-- Estilo customizado --> 
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 
-    <title>PNEWS - Borracharias</title>
+    <title>PNEWS - Perfil</title>
     <link rel="icon" href="img/logo-titulo.png">
   </head>
 
@@ -36,13 +61,13 @@
 					<div class="collapse navbar-collapse justify-content-end" id="nav-target">			
 						<ul class="navbar-nav ml-auto"> 
 							<li class="nav-item">
-								<a href="#" class="nav-link text-black"><strong>Home</strong></a>
+								<a href="home.php" class="nav-link text-black"><strong>Home</strong></a>
 							</li>
 	
 							<li class="divisor-nav align-self-center collapse navbar-collapse"></li>
 
 							<li class="nav-item">
-								<a href="#" class="nav-link text-black"><strong>Sair</strong></a>
+								<a href="index.html" class="nav-link text-black"><strong>Sair</strong></a>
 							</li>	
 						</ul>
 
@@ -52,28 +77,46 @@
 
 		</header><!-- Fim cabeçalho -->
 
-		<main class="full-height">
+		<main id="main-perfil" class="full-height">
 
-			<div class="container h-100 pt-md-3 pb-5">
-				<div class="row justify-content-center h-100">
-					<div class="col">
+				<div class="container h-100 px-0">
 
-                        <!-- API do maps -->
-                        <div id="map" style="width:100%;height: 100%;"></div>
-                        <script>
-                            function myMap() {
-                                var mapCanvas = document.getElementById("map");
-                                var mapOptions = {
-                                center: new google.maps.LatLng(-23.667141962399672, -46.42199768678884), zoom: 13
-                            };
-                            var map = new google.maps.Map(mapCanvas, mapOptions);
-                            }
-                        </script>   
-                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjQxnuZYdx5CK1vPW3J6zAMcofj04l5rY&callback=myMap"></script>
-    
-                    </div>
+					<div class="row m-0 py-3 border-bottom ">
+						<h2><strong>Bem - vindo, teste </strong></h2> 
+
+						<div class="row justify-content-between">
+							<div class="col">
+								<span>E-mail: teste@hotmail.com</span>
+							</div>
+
+							<div class="col-4 text-end px-0 mx-0">
+								<a href="#" class="text-black px-0"><strong>Redefinir senha</strong></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="row m-0 py-3 border-bottom">
+						<h2><strong>Meus dados</strong></h2>
+						<span>CPF/CNPJ: XXX.XXX.XXX-00</span>
+						<span>Data Nascimento: 22/22/2222</span>
+						<span>Telefone: (11) 91234-1234</span>
+					</div>
+				
+					<div class="row m-0 py-3 border-bottom">
+						<h2><strong>Endereço</strong></h2>
+						<span>Rua  João Abrantes de Carvalho </span>
+						<span>Número 300, Jardim Nilza Miranda</span>
+						<span>CEP XXXXXX-XXX - Mauá - SP </span>
+					</div>
+
+					<div class="row justify-content-center m-0 py-3 border-bottom">
+						<h2><strong>Informações cadastrais</strong></h2>
+						<span>Modelo da moto:</span>
+						<span>Marca de pneus utilizado:</span>
+						<span>Modelo do pneu</span>
+						<span>Tempo médio de troca:</span>
+					</div>
 				</div>
-			</div>
 
         </main>
 

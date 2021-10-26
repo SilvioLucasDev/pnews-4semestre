@@ -41,10 +41,10 @@
                         <div class="col-10 col-sm-8 text-center align-self-center">
                             <h2 class="mb-5" ><strong>Login</strong></h2>
 
-                            <form class="mb-5" action="php...">
-                                <input class="form-control" type="text" placeholder="E-mail">
+                            <form class="mb-5" action="usuario_controller.php" method="POST">
+                                <input class="form-control borda" type="text" name="email" placeholder="E-mail">
                                 <br>
-                                <input class="form-control" type="password" placeholder="Senha">
+                                <input class="form-control borda" type="password" name="senha" placeholder="Senha">
                                 <br>
                                 <a href="#" class="link-secondary"><u>Esqueceu a senha?</u></a>
 
@@ -58,10 +58,10 @@
                                     </a>
                                 </div>
 
-                                <input class="btn btn-outline-danger btn-lg" type="submit" value="Continuar" >
+                                <input class="btn btn-outline-danger btn-lg borda" type="submit" name="login" value="Continuar" >
                             </form>
 
-                            <a href="#" class="link-secondary h5"> Cadastre-se grátis</a>
+                            <a href="cadastro.html" class="link-secondary h5"> Cadastre-se grátis</a>
                         </div>
                     </div>
                 </div>

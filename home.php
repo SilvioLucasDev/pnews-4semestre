@@ -1,3 +1,13 @@
+<?php 
+
+	require '../pnews/usuario_controller.php';
+
+	if(!isset($_SESSION['autenticado']) || $_SESSION['autenticado'] != 'SIM' ){
+		header('location: login.php');
+	}	
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -34,33 +44,20 @@
 
 					<!-- Navegação -->
 					<div class="collapse navbar-collapse justify-content-end" id="nav-target">			
-						<ul class="navbar-nav"> 
+						<ul class="navbar-nav">
+							
 							<li class="nav-item">
-								<a href="#" class="nav-link text-black"><strong>Perfil</strong></a>
+
+								<a href="usuario_controller.php?perfil=1" class="nav-link text-black">
+									<strong>Perfil</strong>
+								</a>
+
 							</li>
-	
+							
 							<li class="divisor-nav align-self-center collapse navbar-collapse"></li>
 
 							<li class="nav-item">
-								<a href="#" class="nav-link text-black"><strong>Pedidos</strong></a>
-							</li>	
-
-							<li class="divisor-nav align-self-center collapse navbar-collapse"></li>
-
-							<li class="nav-item">
-								<a href="#" class="nav-link text-black"><strong>Favoritos</strong></a>
-							</li>
-
-							<li class="divisor-nav align-self-center collapse navbar-collapse"></li>
-
-							<li class="nav-item">
-								<a href="#" class="nav-link text-black"><strong>Atendimento</strong></a>
-							</li>
-
-							<li class="divisor-nav align-self-center collapse navbar-collapse"></li>
-
-							<li class="nav-item">
-								<a href="#" class="nav-link text-black"><strong>Sair</strong></a>
+								<a href="index.html" class="nav-link text-black"><strong>Sair</strong></a>
 							</li>
 						</ul>
 
@@ -71,29 +68,20 @@
 
 		</header><!-- Fim cabeçalho -->
 
-		<main class="full-height ">
+		<main class="full-height">
 
 			<div class="container h-100">
 				<div class="row justify-content-center h-100">
-					<div class="col col-lg-9 col-xl-7 p-0 align-self-center">
-						
-							<div class="">
-								<a href="#"> 
-									<img src="img/botao-procure-borracharias.svg" class="img-fluid" alt="Procurar Borracharias">
-								</a>
-							</div>
+					<div class="col col-lg-9 col-xl-7 align-self-center">
+						<div class="botao">
+							<a href="borracharias.php"> 
+								<img src="img/botao-procure-borracharias.svg" class="img-fluid" alt="Procurar Borracharias">
+							</a>
+						</div>
 
-							<div class="row my-5">
-								<a href="#"> 
-									<img src="img/botao-compre-parceiros.svg" class="img-fluid" alt="Comprar Com Parceiros">
-								</a>
-							</div>
-
-							<div class="">
-								<a href="#"> 
-									<img src="img/botao-help-me.svg" class="img-fluid" alt="Help-Me">
-								</a>
-							</div>
+						<div class="cor-fundo text-center">
+							<span>Talvez propaganda?</span>
+						</div>
 
 					</div>
 				</div>

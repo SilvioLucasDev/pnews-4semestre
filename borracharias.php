@@ -1,4 +1,14 @@
- <!DOCTYPE html>
+<?php 
+
+	require '../pnews/usuario_controller.php';
+
+	if(!isset($_SESSION['autenticado']) || $_SESSION['autenticado'] != 'SIM' ){
+		header('location: login.php');
+	}	
+
+?>
+
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <!-- Required meta tags -->
@@ -11,7 +21,7 @@
     <!-- Estilo customizado --> 
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 
-    <title>PNEWS - Help-me</title>
+    <title>PNEWS - Borracharias</title>
     <link rel="icon" href="img/logo-titulo.png">
   </head>
 
@@ -36,13 +46,13 @@
 					<div class="collapse navbar-collapse justify-content-end" id="nav-target">			
 						<ul class="navbar-nav ml-auto"> 
 							<li class="nav-item">
-								<a href="#" class="nav-link text-black"><strong>Home</strong></a>
+								<a href="home.php" class="nav-link text-black"><strong>Home</strong></a>
 							</li>
 	
 							<li class="divisor-nav align-self-center collapse navbar-collapse"></li>
 
 							<li class="nav-item">
-								<a href="#" class="nav-link text-black"><strong>Sair</strong></a>
+								<a href="index.html" class="nav-link text-black"><strong>Sair</strong></a>
 							</li>	
 						</ul>
 
@@ -54,33 +64,23 @@
 
 		<main class="full-height">
 
-			<div class="container pb-5 h-100">
+			<div class="container h-100 pt-md-3 pb-5">
+				<div class="row justify-content-center h-100">
+					<div class="col">
 
-				<div class="row justify-content-center m-0 py-3">
-						<h2 class="col-10 text-center"><strong>Preencha os campos abaixo para enviarmos um parceiro</strong></h2>
-				</div>
-
-				<div class="row justify-content-center">
-					<div class="col-5 align-self-center text-center">
-
-						<form action="php...">
-							<input class="form-control" type="text" placeholder="Oque aconteceu?">
-							<br>
-							<input class="form-control" type="text" placeholder="Destino">
-							<br>
-							<input class="form-control" type="text" placeholder="LOREM IPSUM">
-							<br>
-							<input class="form-control" type="text" placeholder="LOREM IPSUM">
-							<br>
-							<input class="form-control" type="text" placeholder="LOREM IPSUM">
-							<br>
-							<input class="form-control" type="text" placeholder="LOREM IPSUM">
-							<br>
-							<input class="form-control" type="text" placeholder="LOREM IPSUM">
-							<br>
-							<input class="form-control" type="text" placeholder="LOREM IPSUM">
-
-							<input class="btn btn-outline-danger btn-lg mt-5" type="submit" value="Enviar">
+                        <!-- API do maps -->
+                        <div id="map" style="width:100%;height: 100%;"></div>
+                        <script>
+                            function myMap() {
+                                var mapCanvas = document.getElementById("map");
+                                var mapOptions = {
+                                center: new google.maps.LatLng(-23.667141962399672, -46.42199768678884), zoom: 13
+                            };
+                            var map = new google.maps.Map(mapCanvas, mapOptions);
+                            }
+                        </script>   
+                        <!-- Colocar chave da API do google aqui-->
+    
                     </div>
 				</div>
 			</div>
