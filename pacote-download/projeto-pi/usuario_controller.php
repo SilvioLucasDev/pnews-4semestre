@@ -20,27 +20,23 @@
             $usuarioService = new UsuarioService($conexao, $usuario);
             $existeUsuario = $usuarioService->validarLogin();
 
-            echo "<pre>";
-            print_r($existeUsuario);
-            echo "<pre>";
-
             if($existeUsuario['id'] != '' && $existeUsuario['nome'] != '') {
                 $_SESSION['autenticado'] = "SIM";
                 $_SESSION['id'] = $existeUsuario['id'];
                 header('location: home.php');
             } else {
                 $_SESSION['autenticado'] = "NAO";
-                header('location: login.php');
+                header('Location: login.php?login=erro');
             } 
 
         } else {
-            //Inserir mensagem de usuário não existe por GET ?acao
-            header('Location: login.php');
+            header('Location: login.php?login=erro');
         }
 
+
+    // ---------------- Inserir dados do cadastro ----------------
     } else if(isset($_POST['submit'])) {
 
-        // ---------------- Inserir dados do cadastro ----------------
         $usuario = new Usuario();
         $usuario->__set('nome', $_POST['nome']);
         $usuario->__set('cpf', $_POST['cpf']);
@@ -63,9 +59,10 @@
         $UsuarioService = new UsuarioService($conexao, $usuario);
 		$UsuarioService->inserir();
 
-        //header('location: login.php?inclusao=1'); Implementar código para inserir mensagem de sucesso na hora do cadastro.
-        header('location: home.php');
+        header('location: login.php?cadastro=sucesso');
+    
 
+    // ---------------- Recuperar dados do usuário ----------------
     } else if(isset($_GET['perfil'])) {	    
 
 		$usuario = new Usuario();
@@ -76,19 +73,31 @@
         $usuarioService = new UsuarioService($conexao, $usuario);
         $recuperar = $usuarioService->recuperar();
 
+        $_SESSION['nome'] = $recuperar['nome'];
+        $_SESSION['cpf'] = $recuperar['cpf'];
+        $_SESSION['dt_nascimento'] = $recuperar['dt_nascimento'];
+        $_SESSION['telefone'] = $recuperar['telefone'];
+        $_SESSION['email'] = $recuperar['email'];
+        $_SESSION['senha'] = $recuperar['senha'];
+        $_SESSION['rua'] = $recuperar['rua'];
+        $_SESSION['numero'] = $recuperar['numero'];
+        $_SESSION['bairro'] = $recuperar['bairro'];
+        $_SESSION['cidade'] = $recuperar['cidade'];
+        $_SESSION['estado'] = $recuperar['estado'];
+        $_SESSION['modelo_moto'] = $recuperar['modelo_moto'];
+        $_SESSION['pneu_utilizado'] = $recuperar['pneu_utilizado'];
+        $_SESSION['modelo_pneu'] = $recuperar['modelo_pneu'];
+        $_SESSION['tp_medio_troca'] = $recuperar['tp_medio_troca'];
+
         header('location: perfil.php');
-
-        /*
-        foreach ($recuperar as $indice => $user) {
-
-            echo '<pre>';
-                print_r($user);
-            echo '</pre>';
-                    
-            print_r($user->nome);
-        }
-        */
+     
         
+    // ---------------- Encerra a sessão do usuário ----------------
+    } else if(isset($_GET['sair'])) {	
+
+        session_destroy();
+
+        header('location: index.html');
     }
-    
+
 ?>

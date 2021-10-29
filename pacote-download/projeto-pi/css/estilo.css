@@ -1,5 +1,5 @@
 /*****************************************************************************************************
-		Estrutura padrão do site e classes globais
+		Estrutura padrão do site
 *****************************************************************************************************/
 
 * {
@@ -33,7 +33,6 @@ body {
 	height: 86%;
 }
 
-
 /* Cor cinza background */
 .cor-fundo {
 	background-color: #F3F3F3 !important;
@@ -44,6 +43,11 @@ body {
 	height: 20px;
 	border-right: 1px solid #000;
  }
+
+ /* Arredondamento para forms*/
+ .borda {
+	border-radius: 15px;
+}
 
 
 
@@ -84,4 +88,9 @@ body {
 
 .cor-teste {
 	background-color: #7e0000 !important;
+}
+
+
+.botao {
+	padding-bottom: 400px;
 }
