@@ -23,14 +23,6 @@
 	<div class="container">
         <div class="row vh-100">
 
-        <?php if(isset($_GET['cadastro']) && $_GET['cadastro'] == 'sucesso') { ?>
-            <div class="col-12">
-                <div class="bg-success text-white d-flex justify-content-center">
-                    <h2>Cadastro realizado com sucesso!</h2>
-                </div>
-            </div>
-        <?php } ?>
-
             <!-- Logo -->
             <div class="col-5 d-none d-lg-block align-self-center">
                 <div class="row justify-content-center">
@@ -53,20 +45,9 @@
                                 <input class="form-control borda" type="text" name="email" placeholder="E-mail">
                                 <br>
                                 <input class="form-control borda" type="password" name="senha" placeholder="Senha">
-                               
-                                <?php if(isset($_GET['login']) && $_GET['login'] == 'erro') { ?>
-                                    <div class="row mt-0 mt-1">
-                                        <div class="col">
-                                            <span class="text text-danger">*E-mail e/ou senha inválido(s)</span>
-                                        </div>
-                                    </div>
-                                <?php } ?>
-
                                 <br>
                                 <a href="#" class="link-secondary"><u>Esqueceu a senha?</u></a>
-                                <br>
-                                
-                                <!-- Futuramente implementar login com APIS 
+
                                 <div class="m-5">
                                     <a href="#" class="btn">
                                         <i class="fab fa-facebook-square fa-3x"></i>
@@ -76,12 +57,11 @@
                                         <i class="fab fa-google-plus-square fa-3x"></i>
                                     </a>
                                 </div>
-                                -->
 
-                                <input class="btn btn-outline-danger btn-lg borda mt-4" type="submit" name="login" value="Continuar" >
+                                <input class="btn btn-outline-danger btn-lg borda" type="submit" name="login" value="Continuar" >
                             </form>
 
-                            <a href="cadastro.php" class="link-secondary h5"> Cadastre-se grátis</a>
+                            <a href="cadastro.html" class="link-secondary h5"> Cadastre-se grátis</a>
                         </div>
                     </div>
                 </div>

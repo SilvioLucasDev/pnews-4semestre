@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 	require '../pnews/usuario_controller.php';
 
@@ -21,7 +21,7 @@
     <!-- Estilo customizado --> 
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 
-    <title>PNEWS - Perfil</title>
+    <title>PNEWS - Borracharias</title>
     <link rel="icon" href="img/logo-titulo.png">
   </head>
 
@@ -52,10 +52,8 @@
 							<li class="divisor-nav align-self-center collapse navbar-collapse"></li>
 
 							<li class="nav-item">
-								<a href="usuario_controller.php?sair=1" class="nav-link text-black">
-									<strong>Sair</strong>
-								</a>
-							</li>
+								<a href="index.html" class="nav-link text-black"><strong>Sair</strong></a>
+							</li>	
 						</ul>
 
 					</div>
@@ -64,46 +62,28 @@
 
 		</header><!-- Fim cabeçalho -->
 
-		<main id="main-perfil" class="full-height">
+		<main class="full-height">
 
-				<div class="container h-100 px-0">
+			<div class="container h-100 pt-md-3 pb-5">
+				<div class="row justify-content-center h-100">
+					<div class="col">
 
-					<div class="row m-0 py-3 border-bottom ">
-						<h2><strong>Bem - vindo, <?php print_r($_SESSION['nome']); ?></strong></h2> 
-
-						<div class="row justify-content-between">
-							<div class="col">
-								<span>E-mail: <?php print_r($_SESSION['email']); ?></span>
-							</div>
-
-							<div class="col-4 text-end px-0 mx-0">
-								<a href="#" class="text-black px-0"><strong>Redefinir senha</strong></a>
-							</div>
-						</div>
-					</div>
-
-					<div class="row m-0 py-3 border-bottom">
-						<h2><strong>Meus dados</strong></h2>
-						<span>CPF/CNPJ: <?php print_r($_SESSION['cpf']); ?></span>
-						<span>Data Nascimento: <?php print_r($_SESSION['dt_nascimento']); ?></span>
-						<span>Telefone: <?php print_r($_SESSION['telefone']); ?></span>
-					</div>
-				
-					<div class="row m-0 py-3 border-bottom">
-						<h2><strong>Endereço</strong></h2>
-						<span>Rua  <?php print_r($_SESSION['rua']); ?> </span>
-						<span>Número <?php print_r($_SESSION['numero']); ?>, <?php print_r($_SESSION['bairro']); ?></span>
-						<span><?php print_r($_SESSION['cidade']); ?> - <?php print_r($_SESSION['estado']); ?> </span>
-					</div>
-
-					<div class="row justify-content-center m-0 py-3 border-bottom">
-						<h2><strong>Informações cadastrais</strong></h2>
-						<span>Modelo da moto: <?php print_r($_SESSION['modelo_moto']); ?></span>
-						<span>Marca de pneu utilizado: <?php print_r($_SESSION['pneu_utilizado']); ?></span>
-						<span>Modelo do pneu <?php print_r($_SESSION['modelo_pneu']); ?></span>
-						<span>Tempo médio de troca: <?php print_r($_SESSION['tp_medio_troca']); ?></span>
-					</div>
+                        <!-- API do maps -->
+                        <div id="map" style="width:100%;height: 100%;"></div>
+                        <script>
+                            function myMap() {
+                                var mapCanvas = document.getElementById("map");
+                                var mapOptions = {
+                                center: new google.maps.LatLng(-23.667141962399672, -46.42199768678884), zoom: 13
+                            };
+                            var map = new google.maps.Map(mapCanvas, mapOptions);
+                            }
+                        </script>   
+                        <!-- Colocar chave da API do google aqui-->
+    
+                    </div>
 				</div>
+			</div>
 
         </main>
 

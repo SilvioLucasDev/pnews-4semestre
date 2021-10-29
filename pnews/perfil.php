@@ -6,6 +6,21 @@
 		header('location: login.php');
 	}	
 
+	//print_r($_SESSION['id']); Possível forma de trazer os dados
+
+	echo '<pre>';
+		print_r($recuperar);
+	echo '<pre>';
+
+	foreach ($recuperar as $indice => $user) {
+
+		echo '<pre>';
+			print_r($user);
+		echo '</pre>';
+				
+		print_r($user->nome);
+    }
+ 	
 ?>
 
 <!DOCTYPE html>
@@ -52,10 +67,8 @@
 							<li class="divisor-nav align-self-center collapse navbar-collapse"></li>
 
 							<li class="nav-item">
-								<a href="usuario_controller.php?sair=1" class="nav-link text-black">
-									<strong>Sair</strong>
-								</a>
-							</li>
+								<a href="index.html" class="nav-link text-black"><strong>Sair</strong></a>
+							</li>	
 						</ul>
 
 					</div>
@@ -69,11 +82,11 @@
 				<div class="container h-100 px-0">
 
 					<div class="row m-0 py-3 border-bottom ">
-						<h2><strong>Bem - vindo, <?php print_r($_SESSION['nome']); ?></strong></h2> 
+						<h2><strong>Bem - vindo, teste </strong></h2> 
 
 						<div class="row justify-content-between">
 							<div class="col">
-								<span>E-mail: <?php print_r($_SESSION['email']); ?></span>
+								<span>E-mail: teste@hotmail.com</span>
 							</div>
 
 							<div class="col-4 text-end px-0 mx-0">
@@ -84,24 +97,24 @@
 
 					<div class="row m-0 py-3 border-bottom">
 						<h2><strong>Meus dados</strong></h2>
-						<span>CPF/CNPJ: <?php print_r($_SESSION['cpf']); ?></span>
-						<span>Data Nascimento: <?php print_r($_SESSION['dt_nascimento']); ?></span>
-						<span>Telefone: <?php print_r($_SESSION['telefone']); ?></span>
+						<span>CPF/CNPJ: XXX.XXX.XXX-00</span>
+						<span>Data Nascimento: 22/22/2222</span>
+						<span>Telefone: (11) 91234-1234</span>
 					</div>
 				
 					<div class="row m-0 py-3 border-bottom">
 						<h2><strong>Endereço</strong></h2>
-						<span>Rua  <?php print_r($_SESSION['rua']); ?> </span>
-						<span>Número <?php print_r($_SESSION['numero']); ?>, <?php print_r($_SESSION['bairro']); ?></span>
-						<span><?php print_r($_SESSION['cidade']); ?> - <?php print_r($_SESSION['estado']); ?> </span>
+						<span>Rua  João Abrantes de Carvalho </span>
+						<span>Número 300, Jardim Nilza Miranda</span>
+						<span>CEP XXXXXX-XXX - Mauá - SP </span>
 					</div>
 
 					<div class="row justify-content-center m-0 py-3 border-bottom">
 						<h2><strong>Informações cadastrais</strong></h2>
-						<span>Modelo da moto: <?php print_r($_SESSION['modelo_moto']); ?></span>
-						<span>Marca de pneu utilizado: <?php print_r($_SESSION['pneu_utilizado']); ?></span>
-						<span>Modelo do pneu <?php print_r($_SESSION['modelo_pneu']); ?></span>
-						<span>Tempo médio de troca: <?php print_r($_SESSION['tp_medio_troca']); ?></span>
+						<span>Modelo da moto:</span>
+						<span>Marca de pneus utilizado:</span>
+						<span>Modelo do pneu</span>
+						<span>Tempo médio de troca:</span>
 					</div>
 				</div>
 

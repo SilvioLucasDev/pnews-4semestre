@@ -52,8 +52,10 @@
 							<li class="divisor-nav align-self-center collapse navbar-collapse"></li>
 
 							<li class="nav-item">
-								<a href="index.html" class="nav-link text-black"><strong>Sair</strong></a>
-							</li>	
+								<a href="usuario_controller.php?sair=1" class="nav-link text-black">
+									<strong>Sair</strong>
+								</a>
+							</li>
 						</ul>
 
 					</div>
