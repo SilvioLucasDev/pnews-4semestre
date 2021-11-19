@@ -1,6 +1,6 @@
 <?php 
 
-	require '../pnews/usuario_controller.php';
+	require 'usuario_controller.php';
 
 	if(!isset($_SESSION['autenticado']) || $_SESSION['autenticado'] != 'SIM' ){
 		header('location: login.php');
@@ -81,7 +81,7 @@
                             var map = new google.maps.Map(mapCanvas, mapOptions);
                             }
                         </script>   
-                        <!-- Colocar chave da API do google aqui-->
+                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjQxnuZYdx5CK1vPW3J6zAMcofj04l5rY&callback=myMap"></script>
     
                     </div>
 				</div>

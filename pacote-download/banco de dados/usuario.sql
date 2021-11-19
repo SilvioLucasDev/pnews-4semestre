@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 26-Out-2021 às 23:50
+-- Tempo de geração: 29-Out-2021 às 05:36
 -- Versão do servidor: 10.4.20-MariaDB
 -- versão do PHP: 8.0.9
 
@@ -32,7 +32,7 @@ CREATE TABLE `usuarios` (
   `nome` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `cpf` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `dt_nascimento` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `telefone` int(15) NOT NULL,
+  `telefone` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `senha` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `rua` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -51,7 +51,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nome`, `cpf`, `dt_nascimento`, `telefone`, `email`, `senha`, `rua`, `numero`, `bairro`, `cidade`, `estado`, `modelo_moto`, `pneu_utilizado`, `modelo_pneu`, `tp_medio_troca`) VALUES
-(14, 'João do teste', '12345678900', '010101', 2147483647, 'teste_teste@123', '1234', 'Rua do Teste', '111', 'Jardim Teste', 'Jandira', 'São Paulo', 'fazer', 'Michellin', '110/70', '2 meses');
+(22, 'Silvio Lucas dos Santos', '429.496.228-36', '24/04/1999', '(11)959861303', 'silviolucas_santos@hotmail.com', '1234', 'Antonia de oliveira', '108-A', 'Jardim Maria Eneida', 'Mauá', 'São Paulo', 'Fazer', 'Michellin', '110/70', '2 Meses');
 
 --
 -- Índices para tabelas despejadas
@@ -71,7 +71,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
