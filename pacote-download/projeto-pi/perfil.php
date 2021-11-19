@@ -1,6 +1,6 @@
 <?php
 
-	require '../pnews/usuario_controller.php';
+	require 'usuario_controller.php';
 
 	if(!isset($_SESSION['autenticado']) || $_SESSION['autenticado'] != 'SIM' ){
 		header('location: login.php');
@@ -100,7 +100,7 @@
 						<h2><strong>Informações cadastrais</strong></h2>
 						<span>Modelo da moto: <?php print_r($_SESSION['modelo_moto']); ?></span>
 						<span>Marca de pneu utilizado: <?php print_r($_SESSION['pneu_utilizado']); ?></span>
-						<span>Modelo do pneu <?php print_r($_SESSION['modelo_pneu']); ?></span>
+						<span>Modelo do pneu: <?php print_r($_SESSION['modelo_pneu']); ?></span>
 						<span>Tempo médio de troca: <?php print_r($_SESSION['tp_medio_troca']); ?></span>
 					</div>
 				</div>

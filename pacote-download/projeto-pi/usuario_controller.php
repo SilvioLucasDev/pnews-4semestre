@@ -1,8 +1,8 @@
 <?php
 
-    require "../pnews/conexao.php";
-    require "../pnews/usuario_model.php";
-    require "../pnews/usuario_service.php";
+    require "conexao.php";
+    require "usuario_model.php";
+    require "usuario_service.php";
 
     session_start();
 

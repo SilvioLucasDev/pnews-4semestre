@@ -1,6 +1,6 @@
 <?php 
 
-	require '../pnews/usuario_controller.php';
+	require 'usuario_controller.php';
 
 	if(!isset($_SESSION['autenticado']) || $_SESSION['autenticado'] != 'SIM' ){
 		header('location: login.php');
@@ -78,11 +78,6 @@
 								<img src="img/botao-procure-borracharias.svg" class="img-fluid" alt="Procurar Borracharias">
 							</a>
 						</div>
-
-						<div class="cor-fundo text-center">
-							<span>Talvez propaganda?</span>
-						</div>
-
 					</div>
 				</div>
 			</div>
