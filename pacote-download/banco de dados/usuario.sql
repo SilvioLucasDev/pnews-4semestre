@@ -17,6 +17,8 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
+CREATE DATABASE  IF NOT EXISTS `pnews`;
+USE `pnews`;
 --
 -- Banco de dados: `pnews`
 --
@@ -26,6 +28,7 @@ SET time_zone = "+00:00";
 --
 -- Estrutura da tabela `usuarios`
 --
+DROP TABLE IF EXISTS `usuarios`;
 
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
